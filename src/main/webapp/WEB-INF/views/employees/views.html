@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Employees</title>
+</head>
+<body style="text-align: center;">
+<h3>Employees Details</h3>
+<p>
+    <a th:href="@{/employees}">Back to employees list</a>
+</p>
+<table align="center" th:object="${employees}">
+
+    <tr>
+        <td style="text-align: left">Department: </td>
+        <td th:text="${employees.getDepartment()}"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">Name: </td>
+        <td th:text="${employees.getName()}" style="text-align: left"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">Planet: </td>
+        <td th:text="${employees.getPlanet()}"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">Phone Number: </td>
+        <td th:text="${employees.getPhonenumber()}"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">So cmnd: </td>
+        <td th:text="${employees.getCmnd()}"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">Ma nhan vien: </td>
+        <td th:text="${employees.getManhanvien()}"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">Address: </td>
+        <td th:text="${employees.getAddress()}"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left">Email: </td>
+        <td th:text="${employees.getEmail()}"></td>
+    </tr>
+</table>
+</body>
+</html>
